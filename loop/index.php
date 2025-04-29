@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>迴圈t</title>
+    <title>迴圈</title>
 </head>
 
 <style>
@@ -53,6 +53,19 @@
 
     <?php
     //質數程式碼回家做
+    $tmp = 0;
+    for ($i=2;$i<=100;$i++) {
+        $isprime = true;
+        for($j=2;$j<=7;$j++){
+            if ($i % $j == 0) {
+                $isprime = false;
+                break;
+            }
+        }
+        if ($isprime){
+            echo $i . "是質數,";
+        }
+    }
     ?>
 
     <table border=1>
