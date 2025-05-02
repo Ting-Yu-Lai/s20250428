@@ -11,6 +11,9 @@
     #table99 {
         border-collapse: collapse;
         margin: 20px;
+        box-shadow:
+        -3px -3px 6px rgba(255, 0, 0, 0.2),
+         3px  3px 6px rgba(255, 0, 0, 0.6); 
     }
     #table99 td {
         padding:4px 8px;
@@ -24,6 +27,10 @@
     td:nth-child(1){
         background-color:#999;
         color:white;
+    }
+
+    #table99 td:hover {
+        background-color:brown;
     }
 
 </style>
@@ -79,7 +86,7 @@
         ?>
 
     </table>
-
+    <h2>九九乘法表</h2>
     <table id='table99'>
         <tr>
             <td></td>
@@ -107,6 +114,33 @@
             }
         ?>
     </table>
+    <h2>斜角九九乘法表</h2>
+    <table id='table99'>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <?php
+            for ($i=1; $i<10; $i++) {
+                echo "<tr>";
+                    echo "<td>$i</td>" ;
+                for($j=1; $j<10; $j++) {
+                    echo "<td>" . ($i * $j) . "</td>";
+                }
+
+                echo "</tr>";
+            }
+        ?>
+    </table>
 </body>
+
 
 </html>
